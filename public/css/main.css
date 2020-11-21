@@ -61,6 +61,36 @@ main.all-articles {
 
 #articles-home.row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 0;
+}
+
+a.articles-home {
+    color: #18775a;
+    text-decoration: none;
+}
+
+a.articles-home:hover {
+    color: #4886ce;
+    text-decoration: underline;
+}
+
+img.card-img {
+    padding: 15px;
+    width: 100%;
+}
+
+img.article-page-img {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 1px 1px 5px -1px;
+}
+
+#subscribe {
+    color: #18775a;
+}
+
+#index-p {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
