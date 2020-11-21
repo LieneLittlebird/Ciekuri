@@ -52,15 +52,13 @@ const pageUrl = url.parse(req.url);
             renderView('registration-successful.html', '', dirname, res);
             break;
         case '/register':
-            if (req.method === 'GET') {
-                handleUserRegistration(req, res, (errorString) => {
-                    renderView('register.html', errorString, dirname, res);
+            if (req.method === 'POST') {
+                handleUserRegistration(req, res, () => {
+                    renderView('register.html', dirname, res);
                 });
             } else {
                 renderView('register.html', '', dirname, res);
             }
             break;
-        default:
-            renderView('404.html', '', dirname, res);
     }
 })

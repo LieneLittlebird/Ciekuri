@@ -11,9 +11,11 @@ $('#main-form').submit(function () {
         $('#last-name-error').show();
         isValid = false;
     }
+    
     if ($('#email').val() == '') {
         $('#email-error').show();
         isValid = false;
+        
     }
     if ($('#password1').val() == '') {
         $('#password1-error').show();

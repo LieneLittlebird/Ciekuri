@@ -25,12 +25,13 @@ const saveUser = (formData) => {
     fs.writeFileSync(dataFilePath, newDataString);
 }
 
-const handleUserRegistration = (req, res, ) => {
+const handleUserRegistration = (req, res) => {
     req.on('data', (chunk) => {
         const rawData = chunk.toString();
         const formData = querystring.parse(rawData);
 
         saveUser(formData);
+
         res.writeHead(302, {
             'Location': '/registration-successful'
         });
