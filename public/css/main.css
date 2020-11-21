@@ -1,0 +1,27 @@
+.error-msg {
+    display: none; 
+    color: red;
+    margin-bottom: 0;
+}
+.footer {
+    color: rgb(122, 212, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.footer-left {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.footer-center {
+    flex-basis: 40%;
+    text-align: center;
+}
+
+.footer-right {
+    flex-basis: 30%;
+    text-align: center;
+}
