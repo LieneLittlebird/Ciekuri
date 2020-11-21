@@ -28,6 +28,21 @@
     text-align: center;
 }
 
+.card-title {
+    display: flex;
+    justify-content: center;
+}
+.category-content {
+    margin: 5% 5%;
+    color: brown
+}
+
+.category-text, .card-title {
+    color: brown;
+    margin-left: 7%;
+    margin-bottom: 2%;
+}
+
 #carouselExampleIndicators {
     padding-top: 2cm;
     padding-bottom: 2cm;
@@ -94,3 +109,4 @@ img.article-page-img {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
