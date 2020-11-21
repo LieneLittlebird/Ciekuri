@@ -28,6 +28,11 @@ app.get("/products", (req, res) => {
     const html = fs.readFileSync(pathToHtml, "utf8");
     res.send(html);
 });
+app.get("/product2", (req, res) => {
+    let pathToHtml = path.join(dirname, "public", "content", "product2.html");
+    const html = fs.readFileSync(pathToHtml, "utf8");
+    res.send(html);
+});
 app.get("/register", (req, res) => {
     let pathToHtml = path.join(dirname, "public", "content", "register.html");
     const html = fs.readFileSync(pathToHtml, "utf8");
