@@ -27,3 +27,40 @@
     flex-basis: 30%;
     text-align: center;
 }
+
+#carouselExampleIndicators {
+    padding-top: 2cm;
+    padding-bottom: 2cm;
+}
+
+#carousel-card-shadow {
+    box-shadow: 2px 2px 5px 2px;
+}
+main {
+    padding: 25px 40px 10px 40px;
+}
+
+main.all-articles {
+    padding: 25px 40px 10px 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#article1 {
+    box-shadow: 1px 1px 5px -1px;
+}
+
+#article2 {
+    box-shadow: 1px 1px 5px -1px;
+}
+
+#h4-home {
+    margin-top: 15px;
+    margin-left: 0px;
+}
+
+#articles-home.row {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
