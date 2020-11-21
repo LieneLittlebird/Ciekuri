@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+    api:
+        build:
+            dockerfile: Dockerfile
+            context: .
+        volumes:
+            - .:/usr/src/app
+        ports:
+            - "3002:3002"
+        networks:
+            - pinecones-network
+        links:
+            - mongodb
+        working_dir: /usr/src/app
+    mongodb:
+        image: mongo
+        ports:
+            - "27020:27017"
+        networks:
+            - pinecones-network
+
+networks:
+    pinecones-network:
+        driver: bridge

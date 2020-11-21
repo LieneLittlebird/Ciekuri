@@ -1,0 +1,20 @@
+{
+  "name": "ciekuri",
+  "version": "1.0.0",
+  "description": "A project about pinecones",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -L src/index.js"
+  },
+  "keywords": [
+    "ciekuri",
+    "shop"
+  ],
+  "author": "Vaelita, Laima, Santa, Liene",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
