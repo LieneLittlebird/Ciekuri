@@ -65,19 +65,6 @@ app.use(express.static("public"));
 
 app.listen(3002);
 
-app.post("/register", function (req, res) {
-    // palaižam funkcijau kas visu saglabā
-    // handleUserRegistration()
-    let pathToHtml = path.join(
-        dirname,
-        "public",
-        "content",
-        "registration-succ.html"
-    );
-    const html = fs.readFileSync(pathToHtml, "utf8");
-    res.send(html);
-});
-
 const server = http.createServer((req, res) => {
     const pageUrl = url.parse(req.url);
 
