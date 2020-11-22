@@ -33,6 +33,11 @@ app.get("/product2", (req, res) => {
     const html = fs.readFileSync(pathToHtml, "utf8");
     res.send(html);
 });
+app.get("/buy", (req, res) => {
+    let pathToHtml = path.join(dirname, "public", "content", "buy.html");
+    const html = fs.readFileSync(pathToHtml, "utf8");
+    res.send(html);
+});
 app.get("/register", (req, res) => {
     let pathToHtml = path.join(dirname, "public", "content", "register.html");
     const html = fs.readFileSync(pathToHtml, "utf8");
