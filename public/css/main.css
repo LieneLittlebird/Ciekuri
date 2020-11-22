@@ -50,8 +50,9 @@
 #carousel-card-shadow {
     box-shadow: 2px 2px 5px 2px;
 }
+
 main {
-    padding: 25px 40px 10px 40px;
+    padding: 40px 40px 10px 40px;
 }
 
 main.all-articles {
@@ -100,11 +101,13 @@ img.article-page-img {
     box-shadow: 1px 1px 5px -1px;
 }
 
-#subscribe {
+#subscribe-h3 {
     color: #18775a;
 }
 
 #index-p {
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: large;
 }
+
