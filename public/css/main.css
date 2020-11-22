@@ -33,10 +33,11 @@
 }
 .category-content {
     margin: 5% 5%;
-    color: brown
+    color: brown;
 }
 
-.category-text, .card-title {
+.category-text,
+.card-title {
     color: brown;
     margin-left: 7%;
     margin-bottom: 2%;
@@ -111,3 +112,18 @@ img.article-page-img {
     font-size: large;
 }
 
+#newsletter-h1 {
+    color: #18775a;
+    display: flex;
+    justify-content: center;
+}
+
+#news-img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#newsletter-unit {
+    margin-top: 80px;
+}
