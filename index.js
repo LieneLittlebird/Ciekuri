@@ -1,12 +1,12 @@
 import express from "express";
-import http from 'http';
-import querystring from 'querystring';
+import bodyParser from "body-parser";
 import fs from "fs";
 import path from "path";
-import url from "url";
-import handleUserRegistration from './userRegistration.js'
+
+import saveUser from "./userRegistration.js";
 
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const filename = new URL(import.meta.url).pathname;
 const dirname = path.dirname(filename);
@@ -45,30 +45,34 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/registration-successful", (req, res) => {
-    let pathToHtml = path.join(dirname, "public", "content", "registration-successful.html");
+    let pathToHtml = path.join(
+        dirname,
+        "public",
+        "content",
+        "registration-successful.html"
+    );
+    const html = fs.readFileSync(pathToHtml, "utf8");
+    res.send(html);
+});
+
+app.get("/newsletter", (req, res) => {
+    let pathToHtml = path.join(dirname, "public", "content", "newsletter.html");
     const html = fs.readFileSync(pathToHtml, "utf8");
     res.send(html);
 });
 
 app.use(express.static("public"));
 
+app.post("/register", (req, res) => {
+    saveUser(req.body);
+    let pathToHtml = path.join(
+        dirname,
+        "public",
+        "content",
+        "registration-successful.html"
+    );
+    const html = fs.readFileSync(pathToHtml, "utf8");
+    res.send(html);
+});
+
 app.listen(3002);
-
-const server = http.createServer((req, res) =>{
-const pageUrl = url.parse(req.url);
-
-    switch (pageUrl.pathname) {
-        case '/registration-successful':
-            renderView('registration-successful.html', '', dirname, res);
-            break;
-        case '/register':
-            if (req.method === 'POST') {
-                handleUserRegistration(req, res, () => {
-                    renderView('register.html', dirname, res);
-                });
-            } else {
-                renderView('register.html', '', dirname, res);
-            }
-            break;
-    }
-})
