@@ -127,3 +127,9 @@ img.article-page-img {
 #newsletter-unit {
     margin-top: 80px;
 }
+
+#newsletter-footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
